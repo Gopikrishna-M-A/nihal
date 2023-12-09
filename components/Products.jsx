@@ -1,4 +1,6 @@
  import ProductButton from "./ProductButton";
+ import Image from 'next/image';
+
 
 const Products = () => {
 
@@ -18,7 +20,10 @@ const Products = () => {
             </div>
             <ProductButton/>
           </div>
-          <div className="product-img one"><img src="/images/furniture.JPG" alt="" /></div>
+          {/* <div className="product-img one"><img src="/images/furniture.JPG" alt="" /></div> */}
+          <div className="product-img one">
+            <Image src="/images/furniture.JPG" alt="" width={400} height={300} />
+          </div>
         </div>
         <div className="product">
           <div>
@@ -31,7 +36,10 @@ const Products = () => {
             </div>
             <ProductButton/>
           </div>
-          <div className="product-img two"> <img src="/images/logging.JPG" alt="" /></div>
+          {/* <div className="product-img two"> <img src="/images/logging.JPG" alt="" /></div> */}
+          <div className="product-img two">
+            <Image src="/images/logging.JPG" alt="" width={400} height={300} />
+          </div>
         </div>
         <div className="product">
           <div>
@@ -44,7 +52,10 @@ const Products = () => {
             </div>
             <ProductButton/>
           </div>
-          <div className="product-img three"><img src="/images/manufacturing.JPG" alt="" /></div>
+          {/* <div className="product-img three"><img src="/images/manufacturing.JPG" alt="" /></div> */}
+          <div className="product-img three">
+            <Image src="/images/manufacturing.JPG" alt="" width={400} height={300} />
+          </div>
         </div>
       </div>
     </div>
