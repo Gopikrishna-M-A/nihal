@@ -1,26 +1,35 @@
 'use client';
-import { Button, Form, Input } from "antd";
+import { Button, Form, Input, message } from "antd";
 const { TextArea } = Input;
 
 
 
-const onFinish = (values) => {
-  console.log("Success:", values);
-};
-const onFinishFailed = (errorInfo) => {
-  console.log("Failed:", errorInfo);
-};
 
-const onChange = (e) => {
-};
 
 const ContactUs = () => {
+  const [form] = Form.useForm();
+
+  const onFinish = (values) => {
+    // console.log("Success:", values);
+    message.success('Message sent successfully');
+    form.resetFields();
+  };
+  const onFinishFailed = (errorInfo) => {
+    // console.log("Failed:", errorInfo);
+    message.error('Message failed to send');
+  };
+  
+  const onChange = (e) => {
+  };
+
+
   return (
     <div className="contact-section" id="contact">
       <div className="contact-wrapper">
         <div className="sec-title">Contact Us</div>
 
         <Form
+          form={form}
           size='large'
           name="basic"
           initialValues={{
