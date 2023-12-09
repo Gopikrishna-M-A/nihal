@@ -1,6 +1,19 @@
+'use client';
 import { Button } from 'antd';
 
 const Products = () => {
+
+
+  const scrollToSection = (sectionId, padding = 20) => {
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+      const offsetTop = section.offsetTop - padding;
+      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    }
+  };
+
+
   return (
     <div className="products-section" id="products">
       <div className="sec-title">Our Products</div>
@@ -15,7 +28,7 @@ const Products = () => {
               unique, wooden features. Furniture collections that blend classic
               style with heirloom quality.
             </div>
-            <Button href='#contact' type='link' className="product-contact-btn">CONTACT US</Button>
+            <Button onClick={() => scrollToSection('contact')} type='text' className="product-contact-btn">CONTACT US</Button>
           </div>
           <div className="product-img one"><img src="/images/furniture.JPG" alt="" /></div>
         </div>
@@ -28,7 +41,7 @@ const Products = () => {
               the living room or seperate two different areas the dinning room.
               Natural wood connect the interiors to the peace-giving outdoors.
             </div>
-            <Button href='#contact' type='link' className="product-contact-btn">CONTACT US</Button>
+            <Button onClick={() => scrollToSection('contact')} type='text' className="product-contact-btn">CONTACT US</Button>
           </div>
           <div className="product-img two"> <img src="/images/logging.JPG" alt="" /></div>
         </div>
@@ -41,7 +54,7 @@ const Products = () => {
               the look of your home. You can get wood floors that look shiny and
               new, or you can buy brand new wood that looks like an antique.
             </div>
-            <Button href='#contact' type='link' className="product-contact-btn">CONTACT US</Button>
+            <Button onClick={() => scrollToSection('contact')} type='text' className="product-contact-btn">CONTACT US</Button>
           </div>
           <div className="product-img three"><img src="/images/manufacturing.JPG" alt="" /></div>
         </div>

@@ -1,7 +1,18 @@
+'use client';
 import { Button } from 'antd';
 import Link from 'next/link';
 
 const Hero = () => {
+
+  const scrollToSection = (sectionId, padding = 20) => {
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+      const offsetTop = section.offsetTop - padding;
+      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="hero" id='about'>
       <div className="hero-heading">
@@ -24,7 +35,7 @@ const Hero = () => {
             and handcrafted home accessories and gift. Each piece of wood has
             its own story that started long before it got to us.
           </div>
-          <Link href={'#contact'}><Button size='large' type='primary' block className='hero-btn'>CONTACT US</Button></Link>
+          <Button onClick={() => scrollToSection('contact')}  size='large' type='primary' block className='hero-btn'>CONTACT US</Button>
         </div>
       </div>
       <img src="/images/texture.png" alt="" className="hero-bg" />
