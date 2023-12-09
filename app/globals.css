@@ -364,6 +364,12 @@ body{
     /* margin-right: auto; */
     padding: 0 10px;
 }
+.ant-drawer .ant-drawer-close {
+    color: #fff;
+}
+.ant-drawer .ant-drawer-header {
+    background: #1A1F23;
+}
 .ant-drawer .ant-drawer-body  {
     display: flex;
     background: #1A1F23;

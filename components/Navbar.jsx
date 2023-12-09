@@ -75,7 +75,7 @@ const Navbar = () => {
         placement="right"
         onClose={() => setDrawerVisible(false)}
         open={drawerVisible}
-        closable={false} // Disable the close button
+        closable={true} // Disable the close button
         className='menu-drawer'
       >
         <div block onClick={() => scrollToSection('about')} type='text' className="drawer-nav-link">ABOUT US</div>
