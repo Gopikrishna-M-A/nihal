@@ -253,6 +253,8 @@ body{
     border-radius: 50%;
     position: relative;
     margin: auto;
+    background-color: #22282d;
+    z-index: -1;
 }
 .wood img{
     filter: brightness(.7);

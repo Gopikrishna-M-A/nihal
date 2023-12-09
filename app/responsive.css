@@ -135,8 +135,8 @@
             font-size: 30px;
     }
     .hero-text{
-        font-size: 25px;
-        line-height: 31px;
+        font-size: 35px;
+        line-height: 40px;
     }
     .nav-links-wrapper{
         display: none;
@@ -163,7 +163,12 @@
     }
 }
 
-
+@media (width < 350px) {
+    .hero-text{
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
 
 
 
