@@ -1,8 +1,51 @@
+// 'use client';
+
+// import { Button } from 'antd';
+// import { MenuOutlined } from '@ant-design/icons';
+// const Navbar = () => {
+
+//   const scrollToSection = (sectionId, padding = 20) => {
+//     const section = document.getElementById(sectionId);
+
+//     if (section) {
+//       const offsetTop = section.offsetTop - padding;
+//       window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+//     }
+//   };
+
+  
+//   return (
+//     <div className='nav'>
+//         <div className="nav-links-wrapper">
+//             <Button onClick={() => scrollToSection('about')}   type='text' className="nav-link">ABOUT US</Button>
+//             <Button onClick={() => scrollToSection('products')}  type='text' className="nav-link">PRODUCTS</Button>
+//             <Button onClick={() => scrollToSection('materials')} type='text'   className="nav-link">MATERIALS</Button>
+//             <Button onClick={() => scrollToSection('contact')}   type='text' className="nav-link">CONTACT</Button>
+//         </div>
+//         <div  className="menu-icon"><MenuOutlined /></div>
+//         <div className="menu">
+//             <Button type='link' href='#about' className="nav-link">ABOUT US</Button>
+//             <Button type='link' href='#products' className="nav-link">PRODUCTS</Button>
+//             <Button type='link' href='#materials'  className="nav-link">MATERIALS</Button>
+//             <Button type='link' href='#contact' className="nav-link">CONTACT</Button>
+//         </div>
+//     </div>
+//   )
+// }
+
+// export default Navbar
+
+
+
+
 'use client';
 
-import { Button } from 'antd';
+import { Button, Drawer } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
+import { useState } from 'react'; // Import useState to manage the drawer visibility
+
 const Navbar = () => {
+  const [drawerVisible, setDrawerVisible] = useState(false); // State to manage drawer visibility
 
   const scrollToSection = (sectionId, padding = 20) => {
     const section = document.getElementById(sectionId);
@@ -10,27 +53,38 @@ const Navbar = () => {
     if (section) {
       const offsetTop = section.offsetTop - padding;
       window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+      // Close the drawer after clicking a menu item
+      setDrawerVisible(false);
     }
   };
 
-  
   return (
     <div className='nav'>
-        <div className="nav-links-wrapper">
-            <Button onClick={() => scrollToSection('about')}   type='text' className="nav-link">ABOUT US</Button>
-            <Button onClick={() => scrollToSection('products')}  type='text' className="nav-link">PRODUCTS</Button>
-            <Button onClick={() => scrollToSection('materials')} type='text'   className="nav-link">MATERIALS</Button>
-            <Button onClick={() => scrollToSection('contact')}   type='text' className="nav-link">CONTACT</Button>
-        </div>
-        <div  className="menu-icon"><MenuOutlined /></div>
-        <div className="menu">
-            <Button type='link' href='#about' className="nav-link">ABOUT US</Button>
-            <Button type='link' href='#products' className="nav-link">PRODUCTS</Button>
-            <Button type='link' href='#materials'  className="nav-link">MATERIALS</Button>
-            <Button type='link' href='#contact' className="nav-link">CONTACT</Button>
-        </div>
+      <div className="nav-links-wrapper">
+        <Button onClick={() => scrollToSection('about')} type='text' className="nav-link">ABOUT US</Button>
+        <Button onClick={() => scrollToSection('products')} type='text' className="nav-link">PRODUCTS</Button>
+        <Button onClick={() => scrollToSection('materials')} type='text' className="nav-link">MATERIALS</Button>
+        <Button onClick={() => scrollToSection('contact')} type='text' className="nav-link">CONTACT</Button>
+      </div>
+      <div className="menu-icon" onClick={() => setDrawerVisible(true)}>
+        <MenuOutlined />
+      </div>
+
+      {/* Drawer for the responsive menu */}
+      <Drawer
+        placement="right"
+        onClose={() => setDrawerVisible(false)}
+        open={drawerVisible}
+        closable={false} // Disable the close button
+        className='menu-drawer'
+      >
+        <div block onClick={() => scrollToSection('about')} type='text' className="drawer-nav-link">ABOUT US</div>
+        <div block onClick={() => scrollToSection('products')} type='text' className="drawer-nav-link">PRODUCTS</div>
+        <div block onClick={() => scrollToSection('materials')} type='text' className="drawer-nav-link">MATERIALS</div>
+        <div block onClick={() => scrollToSection('contact')} type='text' className="drawer-nav-link">CONTACT</div>
+      </Drawer>
     </div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

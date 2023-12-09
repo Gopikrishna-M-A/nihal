@@ -364,9 +364,21 @@ body{
     /* margin-right: auto; */
     padding: 0 10px;
 }
-.menu{
-    display: none;
-    /* display: flex; */
-    /* flex-direction: column;
-    align-items: flex-end; */
+.ant-drawer .ant-drawer-body  {
+    display: flex;
+    background: #1A1F23;
+    color: #fff;
+    flex-direction: column;
+    gap: 10px;
 }
+.drawer-nav-link{
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    background-color: #15191C;
+    padding: 10px 20px;
+    border-radius: 12px;
+}
+
