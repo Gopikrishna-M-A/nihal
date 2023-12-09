@@ -1,0 +1,287 @@
+/* HERO SECTION */
+@media (width < 1400px) {
+    .hero{
+        padding: 30px 30px;
+    }
+    .page{
+        padding: 50px 100px;
+    }
+}
+@media (width < 1200px) {
+    .hero{
+        padding: 30px 10px;
+    }
+    .page{
+        padding: 50px 50px;
+    }
+    .hero-img {
+        width: 100px;
+        height: 100px;
+    }
+    .hero-text{
+        font-size: 60px;
+        line-height: 70px;
+    }
+    .hero-para{
+        font-size: 16px;
+    }
+}
+/* @media (width < 992px) {  */
+@media (width < 900px) { 
+    .hero-content{
+        flex-direction: column;
+    }
+    .hero-left, .hero-right{
+        width: 100%;
+    }.hero-img-wrapper{
+        justify-content:unset;
+        gap: 20px;
+    }
+    .hero-left{
+        gap: 20px;
+    }
+    .hero-right{
+        gap: 20px;
+        margin-top: 10px;
+    }
+}
+@media (width < 768px) { 
+
+}
+@media (width < 576px) { 
+    .hero-left{
+        padding: 20px 0;
+    }
+    .hero-right{
+        padding: 0px 0;
+    }
+    .hero-heading{
+        padding: 0;
+    }
+
+    
+}
+
+@media (width < 331px) { 
+    .logo-text{
+        font-size: 14px;
+    }
+}
+
+
+
+/* PRODUCTS SECTION */
+@media (width < 1300px) {
+    .products-content{
+        padding: 50px 100px;
+    }
+}
+
+@media (width < 1200px) {
+    .product-desc.even{
+        width: fit-content;
+    }
+    .product-img{
+        width: 200px;
+        height: 276.56px;
+    }
+    .product-img.one, .product-img.three{
+        left: -220px;
+    }
+    .product-img.two{
+        right: -220px;
+    }
+    .products-content{
+        padding: 50px 50px;
+    
+    }
+}
+
+@media (width < 900px) {
+    .page{
+        padding: 50px 150px;
+    }
+    .products-content{
+        width: 100%;
+    }
+    .product-img{
+        position: static;
+        
+        width: 100%;
+        /* height: 260px; */
+    }
+    .product{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .product:nth-child(even){
+        text-align: left;
+    }
+}
+
+@media (width < 768px) {
+    .page{
+        padding: 50px 50px;
+    }
+}
+
+@media (width < 576px) {
+    .page{
+        padding: 50px 10px;
+        padding-top: 20px;
+    }
+    .sec-title{
+            padding: 20px 0;
+            font-size: 30px;
+    }
+    .hero-text{
+        font-size: 25px;
+        line-height: 31px;
+    }
+    .nav-links-wrapper{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .contact-wrapper{
+        padding: 10px 20px;
+        margin-top: 50px;
+    }
+    .copy-rights{
+        font-size: 12px;
+    }
+    .products-content{
+        padding: 20px 10px;
+        background: transparent;
+        margin-top: 0px;
+    }
+    .hero{
+        background:transparent;
+        box-shadow: none;
+        margin-top: 0;
+    }
+}
+
+
+
+
+
+
+
+
+/* MATERIALS SECTION */
+@media (width < 1400px) {
+
+
+}
+
+@media (width < 1200px) {
+    .materials{
+        width: 70%;
+    }
+    .wood{
+        height: 100%;
+        aspect-ratio: 1/1;
+    }
+}
+
+@media (width < 900px) {
+    .materials{
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .materials-bg{
+        top: 10%;
+        width: 100vw;
+    }
+    
+}
+
+@media (width < 768px) {
+
+}
+
+@media (width < 576px) {
+    .wood{
+        width: 150px;
+        height: 150px;
+        
+    }
+    .materials{
+        width: 80%;
+    }
+    .wood-text{
+        font-size: 12px;
+    }
+}
+@media (width < 440px) {
+    .wood{
+        width: 100px;
+        height: 100px;
+        
+    }
+    .materials{
+        width: 70%;
+    }
+}
+@media (width < 350px) {
+    .materials{
+        width: 100%;
+    }
+}
+
+
+
+
+/* CONTACT SECTION */
+@media (width < 1400px) {
+    
+}
+
+@media (width < 1200px) {
+    
+}
+
+@media (width < 992px) {
+    
+}
+
+@media (width < 768px) {
+    
+}
+
+@media (width < 576px) {
+    
+}
+
+
+/* FOOTER SECTION */
+@media (width < 1400px) {
+    .footer-bg{
+        left: -50px;
+    }
+}
+
+@media (width < 1200px) {
+    
+}
+
+@media (width < 900px) {
+    .footer-bg{
+        left: -150px;
+    }
+}
+
+@media (width < 768px) {
+    .footer-bg{
+        left: -50px;
+    }
+}
+
+@media (width < 576px) {
+    .footer-bg{
+        left: -7px;
+        bottom: -50px;
+    }
+}

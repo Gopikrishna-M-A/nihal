@@ -1,5 +1,7 @@
 import { Inter } from 'next/font/google'
+import { ConfigProvider } from "antd";
 import './globals.css'
+import './responsive.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,7 +13,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} page`}>
+      <ConfigProvider
+          theme={{
+            token: {
+              // Seed Token
+              colorPrimary: "#22292E",
+              // Alias Token
+              colorBgContainer: "#ffffff",
+            },
+          }}
+        >
+          <div>
+            {children}
+          </div>
+        </ConfigProvider>
+        </body>
     </html>
   )
 }
