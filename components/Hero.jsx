@@ -1,20 +1,8 @@
-'use client';
-import { Button } from 'antd';
-import Link from 'next/link';
+import HeroButton from "./HeroButton";
 
 const Hero = () => {
-
-  const scrollToSection = (sectionId, padding = 20) => {
-    const section = document.getElementById(sectionId);
-
-    if (section) {
-      const offsetTop = section.offsetTop - padding;
-      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-    }
-  };
-
   return (
-    <div className="hero" id='about'>
+    <div className="hero" id="about">
       <div className="hero-heading">
         <div className="logo"></div>
         <div className="logo-text">K.N.M Timbers and Abu Saw Mill</div>
@@ -23,9 +11,15 @@ const Hero = () => {
         <div className="hero-left">
           <div className="hero-text">Specialty Wood Products</div>
           <div className="hero-img-wrapper">
-            <div className="hero-img"><img src="/images/p1.jpg" alt="" /></div>
-            <div className="hero-img"><img src="/images/p2.jpg" alt="" /></div>
-            <div className="hero-img"><img src="/images/p3.jpg" alt="" /></div>
+            <div className="hero-img">
+              <img src="/images/p1.jpg" alt="" />
+            </div>
+            <div className="hero-img">
+              <img src="/images/p2.jpg" alt="" />
+            </div>
+            <div className="hero-img">
+              <img src="/images/p3.jpg" alt="" />
+            </div>
           </div>
         </div>
         <div className="hero-right">
@@ -35,7 +29,7 @@ const Hero = () => {
             and handcrafted home accessories and gift. Each piece of wood has
             its own story that started long before it got to us.
           </div>
-          <Button onClick={() => scrollToSection('contact')}  size='large' type='primary' block className='hero-btn'>CONTACT US</Button>
+          <HeroButton />
         </div>
       </div>
       <img src="/images/texture.png" alt="" className="hero-bg" />
