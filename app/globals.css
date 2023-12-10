@@ -89,6 +89,12 @@ body{
     border-radius: 50%;
     background-color: #fff;  
 }
+.logo img{
+    width: 100%;   
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
 
 .hero{
     max-width: 1140px;

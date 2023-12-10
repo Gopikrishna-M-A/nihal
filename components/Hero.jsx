@@ -5,7 +5,9 @@ const Hero = () => {
   return (
     <div className="hero" id="about">
       <div className="hero-heading">
-        <div className="logo"></div>
+        <div className="logo">
+        <Image src="/images/logo.png" alt="" width={400} height={300} />
+        </div>
         <div className="logo-text">K.N.M Timbers and Abu Saw Mill</div>
       </div>
       <div className="hero-content">
