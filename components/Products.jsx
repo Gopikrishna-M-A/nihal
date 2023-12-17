@@ -1,9 +1,7 @@
- import ProductButton from "./ProductButton";
- import Image from 'next/image';
-
+import ProductButton from "./ProductButton";
+import Image from "next/image";
 
 const Products = () => {
-
   return (
     <div className="products-section" id="products">
       <div className="sec-title">Our Products</div>
@@ -18,23 +16,28 @@ const Products = () => {
               unique, wooden features. Furniture collections that blend classic
               style with heirloom quality.
             </div>
-            <ProductButton/>
+            <ProductButton />
           </div>
           {/* <div className="product-img one"><img src="/images/furniture.JPG" alt="" /></div> */}
           <div className="product-img one">
-            <Image src="/images/furniture.JPG" alt="" width={400} height={300} />
+            <Image
+              src="/images/furniture.JPG"
+              alt=""
+              width={400}
+              height={300}
+            />
           </div>
         </div>
         <div className="product">
           <div>
             <div className="product-title">Logging</div>
             <div className="product-desc odd">
-              Wooden walls can add spiritual simplicity to that space behind the
-              bed, the one we see every night right beofre we go to sleep, warm
-              the living room or seperate two different areas the dinning room.
-              Natural wood connect the interiors to the peace-giving outdoors.
+              Elevate your space with the serene touch of wooden walls. Whether
+              discreetly behind the bed, warming the living room, or defining
+              dining areas, natural wood effortlessly connects interiors to the
+              peaceful outdoors.
             </div>
-            <ProductButton/>
+            <ProductButton />
           </div>
           {/* <div className="product-img two"> <img src="/images/logging.JPG" alt="" /></div> */}
           <div className="product-img two">
@@ -45,16 +48,21 @@ const Products = () => {
           <div>
             <div className="product-title">Manufacturing</div>
             <div className="product-desc even">
-              Solid hardwood adds charater, warmth and value to any room in your
-              house. We offer exceptional wood floors that will help you enhance
-              the look of your home. You can get wood floors that look shiny and
-              new, or you can buy brand new wood that looks like an antique.
+              Enrich your living spaces with the character, warmth, and value of
+              solid hardwood. Our exceptional wood floors enhance your home's
+              aesthetic, offering options from shiny and new to the charm of
+              antique wood.
             </div>
-            <ProductButton/>
+            <ProductButton />
           </div>
           {/* <div className="product-img three"><img src="/images/manufacturing.JPG" alt="" /></div> */}
           <div className="product-img three">
-            <Image src="/images/manufacturing.JPG" alt="" width={400} height={300} />
+            <Image
+              src="/images/manufacturing.JPG"
+              alt=""
+              width={400}
+              height={300}
+            />
           </div>
         </div>
       </div>

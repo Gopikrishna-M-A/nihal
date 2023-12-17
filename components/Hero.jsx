@@ -1,12 +1,12 @@
 import HeroButton from "./HeroButton";
-import Image from 'next/image';
+import Image from "next/image";
 
 const Hero = () => {
   return (
     <div className="hero" id="about">
       <div className="hero-heading">
         <div className="logo">
-        <Image src="/images/logo.png" alt="" width={400} height={300} />
+          <Image src="/images/logo.png" alt="" width={400} height={300} />
         </div>
         <div className="logo-text">K.N.M Timbers and Abu Saw Mill</div>
       </div>
@@ -30,16 +30,23 @@ const Hero = () => {
         </div>
         <div className="hero-right">
           <div className="hero-para">
-            KNM Timbers brings extraordinary, natural wood flooring, distinctive
-            furniture and unique, wooden features . We features wood products
-            and handcrafted home accessories and gift. Each piece of wood has
-            its own story that started long before it got to us.
+            Established in 1991, K.N.M Timbers and Abu Saw Mill stand as a
+            premier furniture venture in Kerala. With a legacy spanning
+            generations, we've supplied high-quality woods globally for 32
+            years. Our commitment to craftsmanship and creativity makes us the
+            preferred choice for every client.
           </div>
           <HeroButton />
         </div>
       </div>
       {/* <img src="/images/texture.png" alt="" className="hero-bg" /> */}
-      <Image src="/images/texture.png" className="hero-bg" alt="" width={1200} height={800} />
+      <Image
+        src="/images/texture.png"
+        className="hero-bg"
+        alt=""
+        width={1200}
+        height={800}
+      />
     </div>
   );
 };

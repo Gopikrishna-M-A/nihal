@@ -5,13 +5,35 @@ const { TextArea } = Input;
 const FormComponent = () => {
   const [form] = Form.useForm();
 
-  const onFinish = (values) => {
-    // console.log("Success:", values);
-    message.success("Message sent successfully");
+  const onFinish = async(values) => {
+    const message = `New contact form submission:
+    Username: ${values.username}
+    Email: ${values.email}
+    Message: ${values.message}`;
+    
+    try {
+      const response = await fetch('/api/whatsapp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message }),
+      });
+
+      if (response.ok) {
+        message.success("Message sent successfully");
+        console.log('Message sent successfully');
+      } else {
+        message.error('Error sending message');
+      }
+    } catch (error) {
+      console.error(error);
+    }
     form.resetFields();
   };
+
+
   const onFinishFailed = (errorInfo) => {
-    // console.log("Failed:", errorInfo);
     message.error("Message failed to send");
   };
 
