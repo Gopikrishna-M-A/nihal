@@ -1,11 +1,14 @@
 "use client";
+import { useState } from "react";
 import { Button, Form, Input, message } from "antd";
 const { TextArea } = Input;
 
 const FormComponent = () => {
   const [form] = Form.useForm();
+  const [loading, setLoading] = useState(false);
 
   const onFinish = async(values) => {
+    setLoading(true);
     const message = `New contact form submission:
     Username: ${values.username}
     Email: ${values.email}
@@ -21,15 +24,16 @@ const FormComponent = () => {
       });
 
       if (response.ok) {
-        message.success("Message sent successfully");
         console.log('Message sent successfully');
-      } else {
-        message.error('Error sending message');
       }
+
+    
     } catch (error) {
       console.error(error);
+    }finally{
+      setLoading(false);
+      form.resetFields();
     }
-    form.resetFields();
   };
 
 
@@ -93,7 +97,7 @@ const FormComponent = () => {
       </Form.Item>
 
       <Form.Item>
-        <Button className="submit-btn" block type="primary" htmlType="submit">
+        <Button loading={loading} className="submit-btn" block type="primary" htmlType="submit">
           SEND
         </Button>
       </Form.Item>
