@@ -22,7 +22,7 @@ const Navbar = () => {
     <div className='nav'>
       <div className="nav-links-wrapper">
         <Button onClick={() => scrollToSection('about')} type='text' className="nav-link">ABOUT US</Button>
-        <Button onClick={() => scrollToSection('products')} type='text' className="nav-link">PRODUCTS</Button>
+        <Button onClick={() => scrollToSection('products')} type='text' className="nav-link">SERVICES</Button>
         <Button onClick={() => scrollToSection('materials')} type='text' className="nav-link">MATERIALS</Button>
         <Button onClick={() => scrollToSection('contact')} type='text' className="nav-link">CONTACT</Button>
       </div>
@@ -39,7 +39,7 @@ const Navbar = () => {
         className='menu-drawer'
       >
         <div block onClick={() => scrollToSection('about')} type='text' className="drawer-nav-link">ABOUT US</div>
-        <div block onClick={() => scrollToSection('products')} type='text' className="drawer-nav-link">PRODUCTS</div>
+        <div block onClick={() => scrollToSection('products')} type='text' className="drawer-nav-link">SERVICES</div>
         <div block onClick={() => scrollToSection('materials')} type='text' className="drawer-nav-link">MATERIALS</div>
         <div block onClick={() => scrollToSection('contact')} type='text' className="drawer-nav-link">CONTACT</div>
       </Drawer>

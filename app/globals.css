@@ -112,6 +112,7 @@ body{
 .logo-text{
     font-size: 22px;
     font-weight: 900;
+    height: 17px;
 }
 .hero{
     max-width: 1140px;
