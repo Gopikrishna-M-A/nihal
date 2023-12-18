@@ -4,11 +4,11 @@ import Image from "next/image";
 const Products = () => {
   return (
     <div className="products-section" id="products">
-      <div className="sec-title">Our Products</div>
+      <div className="sec-title">Our Services</div>
       <div className="products-content">
         <div className="product">
           <div>
-            <div className="product-title">Furniture</div>
+            <div className="product-title">Furniture Artistry</div>
             <div className="product-desc even">
               No matter what your personal style , we have just the right
               furniture for your living environment . KNM Timbers brings
